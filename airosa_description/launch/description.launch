@@ -1,0 +1,21 @@
+<launch>
+    <arg name="description_name"           default="robot_description"/>
+    <arg name="description_file"           default="$(find airosa_description)/urdf/airosa.urdf"/>
+
+
+    <param name="$(arg description_name)" textfile="$(arg description_file)"/>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+        <param name="use_tf_static"     value="false"/>
+        <param name="publish_frequency" value="200"/>
+        <param name="ignore_timestamp" value="true"/>
+        <remap from="robot_description" to="$(arg description_name)"/>
+    </node>
+    <node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="hlds_laser_publisher" output="screen">
+      <param name="port" value="/dev/ttyUSB1"/>
+      <param name="frame_id" value="laser"/>
+    </node>
+    <node pkg="tf" type="static_transform_publisher" name="laser_to_base_link" args="0 0 0 0 0 0 base_link laser 100" />
+
+</launch>
+

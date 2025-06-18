@@ -1,0 +1,8 @@
+<launch>
+    <!-- launch description.launch -->
+    <include file="$(find airosa_description)/launch/description.launch"/>   
+
+    <!-- Launch RViz to visualize the robot model -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find airosa_description)/rviz/urdf_viewer.rviz" />
+</launch>
+

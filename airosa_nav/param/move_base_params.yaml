@@ -1,0 +1,24 @@
+move_base:
+  # Disable shutting down the costmaps on failure
+  shutdown_costmaps: false
+
+  # Frequency of the controller update (in Hz)
+  controller_frequency: 10.0
+
+  # Time in seconds the planner will wait before giving up on a plan (patience)
+  planner_patience: 5.0
+
+  # Time in seconds the controller will wait before giving up on the current path (patience)
+  controller_patience: 15.0
+
+  # The distance to reset the costmaps in case of oscillation or failure (meters)
+  conservative_reset_dist: 3.0
+
+  # Frequency of the planner (in Hz)
+  planner_frequency: 5.0
+
+  # Timeout for oscillation recovery in seconds
+  oscillation_timeout: 10.0
+
+  # Maximum allowed distance to consider as oscillation (in meters)
+  oscillation_distance: 0.2

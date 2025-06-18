@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- Load parameters from the YAML file -->
+    <rosparam file="$(find airosa_controller)/config/dimensions.yaml" command="load" />
+
+    <!-- Start operator node -->
+    <node name="dynamixel_operator" pkg="airosa_controller" type="operator.py" output="screen" />
+
+</launch>
+

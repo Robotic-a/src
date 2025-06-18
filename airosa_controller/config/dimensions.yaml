@@ -1,0 +1,33 @@
+robot:
+  # Parameters for the body and servo positions
+  body_parameters:
+    L: 80 # Length of the body
+    C: 27 # Parameter C
+    F: 50 # Parameter F
+    T: 60 # Parameter T
+
+  # Offsets for each leg
+  leg_offset:
+    - [40.0, 40.0, 0.0] # Right Front (XoFR, YoFR, ZoFR)
+    - [-40.0, 40.0, 0.0] # Left Front (XoFL, YoFL, ZoFL)
+    - [40.0, -40.0, 0.0] # Right Back (XoBR, YoBR, ZoBR)
+    - [-40.0, -40.0, 0.0] # Left Back (XoBL, YoBL, ZoBL)
+
+  # Servo positions for each leg (Right Front, Left Front, Right Back, Left Back)
+  servo_pos:
+    - [135, 90, 180]
+    - [225, 90, 180]
+    - [45, 90, 180]
+    - [-45, 90, 180]
+
+  # Initial coordinate positions of each leg (X, Y, Z)
+  coor:
+    - [100.0, 100.0, -50.0]
+    - [-100.0, 100.0, -50.0]
+    - [100.0, -100.0, -50.0]
+    - [-100.0, -100.0, -50.0]
+# <launch>
+#   <!-- Load the YAML file under the 'robot' namespace -->
+#   <param name="robot" command="load" file="$(find your_package)/config/robot_parameters.yaml" />
+# </launch>
+
