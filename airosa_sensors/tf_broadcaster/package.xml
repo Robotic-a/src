@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>tf_broadcaster</name>
+  <version>0.0.0</version>
+  <description>The tf_broadcaster package provides a simple broadcaster for odometry data.</description>
+
+  <!-- Maintainer info -->
+  <maintainer email="airosa@todo.todo">airosa</maintainer>
+
+  <!-- License info -->
+  <license>BSD</license>
+
+  <!-- Url tags are optional, but useful for project info -->
+  <!-- <url type="website">http://wiki.ros.org/tf_broadcaster</url> -->
+
+  <!-- Author info (optional) -->
+  <!-- <author email="jane.doe@example.com">Jane Doe</author> -->
+
+  <!-- Dependencies -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>tf2_ros</build_depend>
+  
+  <!-- Export dependencies -->
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <build_export_depend>nav_msgs</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>tf2_ros</build_export_depend>
+  
+  <!-- Runtime dependencies -->
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+
+  <!-- Export for additional tools if needed -->
+  <export>
+    <!-- Other tools can request additional information here -->
+  </export>
+</package>
+

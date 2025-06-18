@@ -1,0 +1,11 @@
+<launch>
+  <arg name="frame_prefix" default=""/>
+
+    <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+        <param name="base_frame" value="$(arg frame_prefix)base_footprint" />
+        <param name="odom_frame" value="$(arg frame_prefix)odom" />
+        <param name="map_frame"  value="/$(arg frame_prefix)map" />
+
+        <rosparam command="load" file="$(find airosa_slam)/config/gmapping_params.yaml" />
+    </node>
+</launch>

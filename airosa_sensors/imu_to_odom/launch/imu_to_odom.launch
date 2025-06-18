@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Launch the imu_to_odom node -->
+  <node name="imu_to_odom_node" pkg="imu_to_odom" type="imu_to_odom_node.py" output="screen">
+    <!-- You can pass arguments to the node here if needed -->
+    <param name="rate" value="10.0" />
+  </node>
+
+  <!-- Broadcast a static transform from odom to base_footprint
+  <node name="static_tf_pub" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 odom base_footprint" /> -->
+
+  <node name="dynamic_tf_pub" pkg="tf_broadcaster" type="tf_broadcaster.py" output="screen" />
+
+</launch>
+
